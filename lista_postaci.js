@@ -6,6 +6,7 @@ const url = "https://api.airtable.com/v0/applHD7TN8d6YaVSF/Table%201"
   async function fetchText() {
 	var myheader = new Headers()
 	
+	
 	myheader.append('Authorization','Bearer ${{secrets.AIRTABLE_API_KEY}}');
 	
     const response = await fetch(url, { 
