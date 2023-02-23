@@ -5,10 +5,9 @@ const url = "https://api.airtable.com/v0/applHD7TN8d6YaVSF/Table%201"
   
 
   async function fetchText() {
-	const bearer = "'Bearer " + ${{secrets.AIRTABLE_API_KEY}} + "'"
     const response = await fetch(url, {
 		headers: {
-			'Authorization': bearer	}
+			'Authorization': 'Bearer ${{secrets.AIRTABLE_API_KEY}}'	}
 		}
 	); //ogolne zapytanie do tabeli z postaciami
 	
