@@ -1,18 +1,12 @@
 // api url
 const url = "https://api.airtable.com/v0/applHD7TN8d6YaVSF/Table%201"
 
-  
-
   async function fetchText() {
-	var myheader = new Headers()
-	
-	
-	myheader.append('Authorization','Bearer ${{secrets.AIRTABLE_API_KEY}}');
-	
-    const response = await fetch(url, { 
-		headers: myheader 
-		});
-	 //ogolne zapytanie do tabeli z postaciami
+    const response = await fetch(url, {
+		headers: {
+			'Authorization': 'Bearer patBAvUmSYf4w8F6S.47517bb92bac6b2c2de5c5153598416a1f636fabf6c874cfa3014e0b5a88a9af'	}
+		}
+	); //ogolne zapytanie do tabeli z postaciami
 	
     var data = await response.json();
     
